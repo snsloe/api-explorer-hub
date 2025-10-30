@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Facts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">Anime Facts</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./github-repos.html" class="nav-link">GitHub Repos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./anime-facts.html" class="nav-link active">Anime Facts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./dota-rankings.html" class="nav-link">Dota 2 Rankings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <h2>Random Anime Facts</h2>
+                <div class="controls">
+                    <label for="animeSelect">Select Anime:</label>
+                    <select id="animeSelect">
+                        <option value="">Loading animes...</option>
+                    </select>
+                    <label for="factCount">Facts to show:</label>
+                    <select id="factCount">
+                        <option value="3">3</option>
+                        <option value="5" selected>5</option>
+                        <option value="7">7</option>
+                    </select>
+                    <button id="loadFacts" class="btn">Get Anime Facts!</button>
+                    <button id="clearFacts" class="btn btn-secondary">Clear</button>
+                </div>
+                <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: -1.5rem; margin-bottom: 1.0rem;">
+                    Если некоторые картинки не загружаются, стоит использовать VPN
+                </p>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Loading anime facts...</p>
+                </div>
+
+                <div id="error" class="error hidden">
+                    <p>Failed to load anime facts. Please try again.</p>
+                </div>
+
+                <div id="factsContainer" class="facts-container"></div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="./anime-facts.js"></script>
+</body>
+</html>

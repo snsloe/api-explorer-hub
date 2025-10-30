@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Explorer Hub</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .app-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            border-color: #0366d6;
+        }
+        
+        .app-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .app-card h3 {
+            color: #24292e;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .app-card p {
+            color: #586069;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .app-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #24292e 0%, #0366d6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .app-link:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">API Explorer</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./github-repos.html" class="nav-link">GitHub Repos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./anime-facts.html" class="nav-link">Anime Facts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./dota-rankings.html" class="nav-link">Dota 2 Rankings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>API Explorer Hub</h1>
+            <p>Исследуйте различные API и находите интересную информацию о Github репозиториях, аниме и доте2</p>
+        </div>
+
+        <main class="main-content">
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon"></div>
+                    <h3>GitHub Repositories</h3>
+                    <p>Откройте для себя самые популярные репозитории GitHub с подробной информацией о звездах, форках и языках программирования.</p>
+                    <a href="./github-repos.html" class="app-link">Explore Repos</a>
+                </div>
+                
+                <div class="app-card">
+                    <div class="app-icon"></div>
+                    <h3>Anime Facts</h3>
+                    <p>Получите интересные факты и информацию о популярных аниме, включая рейтинг, жанры, год выхода и описание.</p>
+                    <a href="./anime-facts.html" class="app-link">Explore Anime</a>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-icon"></div>
+                    <h3>Dota 2 Rankings</h3>
+                    <p>Изучайте рейтинг героев Dota 2. Узнайте лучших героев по популярности и количеству побед. Для загрузки данных необходимо использовать VPN.</p>
+                    <a href="./dota-rankings.html" class="app-link">View Rankings</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
