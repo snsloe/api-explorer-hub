@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dota 2 Rankings</title>
+  <script type="module" crossorigin src="./assets/dota-BBBezZ_2.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="./assets/style-CTqmp4gY.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">Dota 2 Rankings</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./github-repos.html" class="nav-link">GitHub Repos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./anime-facts.html" class="nav-link">Anime Facts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./dota-rankings.html" class="nav-link active">Dota 2 Rankings</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <h2>Dota 2 Hero Rankings</h2>
+
+                <div class="controls">
+                    <label for="rankingType">Ranking Type:</label>
+                    <select id="rankingType">
+                        <option value="popularity">Most Popular Heroes</option>
+                        <option value="winrate">Highest Win Rate</option>
+                        <option value="matches">Most Played</option>
+                    </select>
+
+                    <button id="loadRankings" class="btn">Load Rankings</button>
+                    <button id="clearRankings" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: -1.5rem; margin-bottom: 1.0rem;">
+                    API работает только с VPN
+                </p>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Loading Dota 2 rankings...</p>
+                </div>
+
+                <div id="error" class="error hidden">
+                    <p>Failed to load rankings. Please try again.</p>
+                </div>
+
+                <div id="rankingsContainer" class="facts-container"></div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
